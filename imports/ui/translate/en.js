@@ -339,6 +339,7 @@ const lang = {
       PPC: 'Peercoin',
       MZC: 'Mazacoin',
       SDC: 'ShadowCash',
+      VRSC: 'Verus'
     },
   },
 };
