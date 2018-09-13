@@ -174,11 +174,10 @@ class App extends React.Component {
   }
 
   globalClick() {
+    if (this.globalClickTimeout) {
+      clearTimeout(this.globalClickTimeout);
+    }
     if (this.state.auth) {
-      if (this.globalClickTimeout) {
-        clearTimeout(this.globalClickTimeout);
-      }
-
       if (!config.dev ||
           (config.dev && config.preload && !config.preload.disableAutoLock) ||
           (config.dev && !config.preload)) {

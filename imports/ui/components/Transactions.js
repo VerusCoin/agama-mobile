@@ -167,13 +167,35 @@ class Transactions extends React.Component {
               className={ `item ${_transactions[i].interest && Math.abs(_transactions[i].interest) > 0 ? 'received' : _transactions[i].type}` }
               key={ `transaction-${i}` }>
               <div className="direction">{ _transactions[i].type }</div>
-              <div className="date">{ secondsToString(_transactions[i].timestamp) }</div>
+              <div className="date">{ secondsToString(_transactions[i].timestamp) }
+              </div>
               { /*<div className="amount-fiat">$0</div> */ }
-              <div className="amount-native">{ this.renderTxAmount(_transactions[i]) }</div>
+              <div className="amount-native">{ this.renderTxAmount(_transactions[i]) }
+              <span
+                    onClick={ () => this.toggleTxDetails(i) }
+                    className={ 'tx-details-toggle fa ' + (this.state.toggledTxDetails === i ? 'fa-caret-up' : 'fa-caret-down') }></span>
+              </div>
               <div className="direction-icon"></div>
+              { this.state.toggledTxDetails === i &&
+                <div>
+                    <div className="tx-details">
+                        <div classname="txid">{ translate('TRANSACTIONS.TXID') + _transactions[i].txid }</div>
+                        <button
+                        onClick={ () => this.openExternalURL(`${explorerList[this.props.coin.toUpperCase()]}/tx/${_transactions[i].txid}`) }
+                        className="explorer-button">
+                        <i className="fa fa-external-link"></i>Explorer
+                        </button>
+                    </div>
+                    <img
+                    className="line padding-bottom-15 padding-top-5"
+                    src={ `${assetsPath.txs}/trends-rectangle-7.png` } />
+                </div>
+              }
+              { this.state.toggledTxDetails !== i &&
               <img
-                className="line"
+                className="line padding-top-50"
                 src={ `${assetsPath.txs}/trends-rectangle-7.png` } />
+              }
             </div>
           );
         }

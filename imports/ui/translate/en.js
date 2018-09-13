@@ -144,6 +144,19 @@ const lang = {
       TX_HASH: 'Tx hash',
       AMOUNT: 'Amount',
       TIME: 'Time',
+      TXID: 'TxID: '
+    },
+    POLLS: {
+      LAST_POLLS: 'Last Poll Requests',
+      LOADING_HISTORY: 'Loading poll request history',
+      NO_HISTORY: 'No history',
+      DIRECTION: 'Category',
+      FROM: 'From: ',
+      TO: 'To: ',
+      POLLS: 'Poll Requests',
+      TOTAL: 'Total requests: ',
+      DESCRIPTION: 'Description: ',
+      ENROLL_ALL: 'Enroll All'
     },
     CLAIM: {
       WARNING: 'Warning',
@@ -175,6 +188,7 @@ const lang = {
       ADDCOIN: 'Add coin',
       'CREATE-SEED': 'Create seed',
       CLAIM: 'Claim rewards',
+      POLLS: 'Poll Requests'
     },
     COINS: {
       // asset chains
