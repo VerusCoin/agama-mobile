@@ -165,14 +165,14 @@ class Transactions extends React.Component {
           _items.push(
             <div
               className={ `item ${_transactions[i].interest && Math.abs(_transactions[i].interest) > 0 ? 'received' : _transactions[i].type}` }
-              key={ `transaction-${i}` }>
+              key={ `transaction-${i}` }
+              onClick={ () => this.toggleTxDetails(i) }>
               <div className="direction">{ _transactions[i].type }</div>
               <div className="date">{ secondsToString(_transactions[i].timestamp) }
               </div>
               { /*<div className="amount-fiat">$0</div> */ }
               <div className="amount-native">{ this.renderTxAmount(_transactions[i]) }
-              <span
-                    onClick={ () => this.toggleTxDetails(i) }
+              <span   
                     className={ 'tx-details-toggle fa ' + (this.state.toggledTxDetails === i ? 'fa-caret-up' : 'fa-caret-down') }></span>
               </div>
               <div className="direction-icon"></div>

@@ -93,7 +93,6 @@ export const _coinsList = [
   'PIZZA',
   'BEER',
   'CCL',
-  'VRSC',
   'CALL',
   'BTC',
   'DOGE',
@@ -144,6 +143,11 @@ for (let i = 0; i < _coinsList.length; i++) {
 
 _coins = sortObject(_coins);
 
+coinsList.push(_coins[translate('COINS.VRSC')]);
+coinsList.push(_coins[translate('COINS.BTC')]);
+coinsList.push(_coins[translate('COINS.KMD')]);
 for (let key in _coins) {
-  coinsList.push(_coins[key]);
+  if (key !== translate('COINS.VRSC') && key !== translate('COINS.BTC') && key !== translate('COINS.KMD')) {
+    coinsList.push(_coins[key]);
+  }
 }

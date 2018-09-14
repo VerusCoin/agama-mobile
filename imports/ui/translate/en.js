@@ -226,7 +226,7 @@ const lang = {
       PRLPAY: 'Pearl Pay',
       OOT: 'Utrum',
       ZILLA: 'Chainzilla',
-      VRSC: 'VerusCoin',
+      VRSC: 'Verus',
       CALL: 'Capital',
       CCL: 'CoinCollect',
       // crypto
