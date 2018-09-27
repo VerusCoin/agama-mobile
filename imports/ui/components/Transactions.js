@@ -179,6 +179,7 @@ class Transactions extends React.Component {
               { this.state.toggledTxDetails === i &&
                 <div>
                     <div className="tx-details">
+                        <div classname="txid">{ translate('TRANSACTIONS.ADDRESS') + _transactions[i].address }</div>
                         <div classname="txid">{ translate('TRANSACTIONS.TXID') + _transactions[i].txid }</div>
                         <button
                         onClick={ () => this.openExternalURL(`${explorerList[this.props.coin.toUpperCase()]}/tx/${_transactions[i].txid}`) }

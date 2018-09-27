@@ -4,7 +4,7 @@
   //top: 52px;
   left: 0;
   width: 100%;
-  background-color: #4c4f69;
+  background-color: #575c6e;
   z-index: 100;
   overflow: hidden;
 
@@ -196,13 +196,13 @@
   position: fixed;
   height: 50px;
   z-index: 110;
-  border-top: solid 2px #373a4c;
+  //border-top: solid 2px #1171b7;
   box-shadow: 0 1px 0 rgba(0, 0, 0, .2), 0 2px 0 rgba(0, 0, 0, 0.06);
-  background: #45485F;
+  background-image: url('images/backgrounds/header.svg');
 
   .ui-title {
     font-family: 'AppleSystemUIFont', Helvetica, Arial, serif;
-    font-size: 16px;
+    font-size: 20px;
     color: #fff;
     letter-spacing: -0.56px;
     line-height: 22px;

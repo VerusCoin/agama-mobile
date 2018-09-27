@@ -1,12 +1,12 @@
 App.info({
-  id: 'com.supernet.agama',
+  id: 'com.verusfoundation.wallet',
   version: '0.1.0',
   buildNumber: '777',
-  name: 'Agama',
-  description: 'Agama Mobile is a lightweight wallet application that allows users to manage multiple crypto currencies. It\'s built on top of SPV technology which provides a quick way to retrieve and push transaction data.',
-  author: 'SuperNET',
-  email: 'pbca@komodoplatform.com',
-  website: 'http://komodoplatform.com'
+  name: 'Verus',
+  description: 'The Verus Multi-Coin Wallet is a lightweight wallet application, based on an Agama core, that allows users to manage multiple crypto currencies. It\'s built on top of SPV technology which provides a quick way to retrieve and push transaction data.',
+  author: 'The Verus Coin Foundation',
+  email: 'development@veruscoin.io',
+  website: 'https://veruscoin.io'
 });
 
 // Set up resources such as icons and launch screens.
@@ -108,6 +108,7 @@ App.accessRule('http://explorer.gobyte.network');
 App.accessRule('http://explorer.fujicoin.org');
 App.accessRule('http://zilla.explorer.dexstats.info');
 App.accessRule('https://explorer.zcoin.io');
+App.accessRule('https://veruscoin.io');
 
 // Set PhoneGap/Cordova preferences.
 App.setPreference('BackgroundColor', '0xffffffff'); // 0x45485FFF

@@ -33,6 +33,7 @@ import Pin from './components/Pin';
 import Recovery from './components/Recovery';
 import Overview  from './components/Overview';
 import Settings  from './components/Settings';
+import Polling from './components/Polling';
 
 const _storageSettings = getLocalStorageVar('settings');
 const DASHBOARD_UPDATE_INTERVAL = 120000; // 2m
@@ -610,6 +611,18 @@ class App extends React.Component {
                         src={ `${assetsPath.menu}/sidemenu-rectangle-3.png` } />
                     </div>
                   }
+                  { this.state.activeSection !== 'polling' &&
+                    <div className="item">
+                      <div
+                        className="title"
+                        onClick={ () => this.changeActiveSection('polling', true) }>
+                        { translate('DASHBOARD.POLLING') }
+                      </div>
+                      <img
+                        className="line"
+                        src={ `${assetsPath.menu}/sidemenu-rectangle-3.png` } />
+                    </div>
+                  }
                   { this.state.activeSection !== 'recovery' &&
                     getLocalStorageVar('seed') &&
                     <div className="item">
@@ -867,6 +880,10 @@ class App extends React.Component {
             { !this.state.auth &&
               this.state.activeSection === 'pin' &&
               <Pin changeActiveSection={ this.changeActiveSection } />
+            }
+            { this.state.auth &&
+              this.state.activeSection === 'polling' &&
+              <Polling { ...this.state } />
             }
             { this.state.auth &&
               this.state.activeSection === 'recovery' &&

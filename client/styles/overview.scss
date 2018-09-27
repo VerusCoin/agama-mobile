@@ -1,3 +1,17 @@
+@media only screen and (max-width : 370px) {
+  .app-main .overview-ui {
+    padding-left: 7px;
+    padding-right: 0;
+  }
+}
+
+@media only screen and (min-width : 371px) {
+  .app-main .overview-ui {
+    padding-left: 26px;
+    padding-right: 0;
+  }
+}
+
 .overview-ui {
   min-height: 100vh;
   padding: 0 10px;

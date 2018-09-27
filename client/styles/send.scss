@@ -1,5 +1,6 @@
 .form.send {
   .edit {
+    background-color: #575c6e;
     font-size: 14px;
     width: inherit;
     max-width: inherit;
@@ -9,6 +10,7 @@
       font-size: 12px;
       margin-top: 6px;
       opacity: 0.8;
+      color: #fff;
     }
     &.success {
       text-transform: capitalize;

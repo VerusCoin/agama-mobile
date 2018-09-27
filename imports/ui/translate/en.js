@@ -128,6 +128,7 @@ const lang = {
       PROXY_ERROR: 'Proxy service is unreachable!',
       CLAIM: 'Claim',
       RETRY: 'Retry',
+      POLLING: 'Votes & Polls'
     },
     TRANSACTIONS: {
       LAST_TX: 'Last Transactions',
@@ -144,7 +145,8 @@ const lang = {
       TX_HASH: 'Tx hash',
       AMOUNT: 'Amount',
       TIME: 'Time',
-      TXID: 'TxID: '
+      TXID: 'TxID: ',
+      ADDRESS: 'Address: '
     },
     POLLS: {
       LAST_POLLS: 'Last Poll Requests',
@@ -156,7 +158,8 @@ const lang = {
       POLLS: 'Poll Requests',
       TOTAL: 'Total requests: ',
       DESCRIPTION: 'Description: ',
-      ENROLL_ALL: 'Enroll All'
+      ENROLL_ALL: 'Enroll All',
+      COMING_SOON: 'Verus Votes and polls are coming soon! Read all about them in our whitepaper at '
     },
     CLAIM: {
       WARNING: 'Warning',
@@ -188,7 +191,8 @@ const lang = {
       ADDCOIN: 'Add coin',
       'CREATE-SEED': 'Create seed',
       CLAIM: 'Claim rewards',
-      POLLS: 'Poll Requests'
+      POLLS: 'Poll Requests',
+      POLLING: 'Votes & Polls'
     },
     COINS: {
       // asset chains

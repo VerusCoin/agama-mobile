@@ -6,6 +6,7 @@ export const assetsPath = {
   menu: '/images/template/menu',
   home: '/images/template/home',
   txs: '/images/template/transactions',
+  polling: '/images/polling'
 };
 
 // https://stackoverflow.com/questions/5467129/sort-javascript-object-by-key

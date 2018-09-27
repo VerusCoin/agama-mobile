@@ -5,6 +5,13 @@
   }
 }
 
+@media only screen and (min-width : 371px) {
+  .app-main .transactions-ui {
+    padding-left: 26px;
+    padding-right: 0;
+  }
+}
+
 .transactions-ui {
   min-height: 100vh;
   padding: 0 10px;
