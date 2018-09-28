@@ -1,0 +1,38 @@
+stages:
+- build
+
+variables:
+  POST_MESSAGE: "Pipeline Trigger: ${CI_PIPELINE_SOURCE}\n
+  Branch: ${CI_COMMIT_REF_NAME}\n
+  Commit: ${CI_COMMIT_SHA}\n
+  Author:  ${GITLAB_USER_NAME} <${GITLAB_USER_EMAIL}>\n
+  ${CI_COMMIT_MESSAGE}"
+
+build:
+  tags: ["High Sierra"]
+  stage: build
+  script:
+  - meteor update
+  - npm install
+  - meteor build build --server=localhost --debug
+  - cd build
+  - tar -czf ios.tar.gz ios
+  - tar -czf android.tar.gz android
+  - curl -F file=@ios.tar.gz
+      -F channels="$MOBILE_POST_CHANNEL"
+      -F initial_comment="${POST_MESSAGE}"
+      -H "${SLACK_BOT_AUTH}"
+      "https://slack.com/api/files.upload"
+  - curl -F file=@android.tar.gz
+      -F channels="$MOBILE_POST_CHANNEL"
+      -F initial_comment="${POST_MESSAGE}"
+      -H "${SLACK_BOT_AUTH}"
+      "https://slack.com/api/files.upload"
+  artifacts:
+    paths: ["build"]
+
+
+
+
+
+
